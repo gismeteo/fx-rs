@@ -12,9 +12,10 @@ build_container! {
     #[derive(Clone)]
     pub struct ServiceProvider;
     
-    attribute: <dyn Provider>
+    {some_name}: <dyn Provider>
+    ....
 }
 let providers = ServiceProvider::build().await?
-let some_provider: NeedleProvider = providers.provide()
+let some_provider: {some_provider} = providers.provide()
 
 ```
